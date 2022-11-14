@@ -10,7 +10,7 @@ This is a website for a space travel program, say there came a time where commer
 - In the destination page there are four other links that leads to details about the destination you just clicked
 - Same with the technology and crew pages 
 
-[Website](assets/images/readme/Space%20(1).png)
+![Website](assets/images/readme/Space%20(1).png)
 
 ## Preview
 Folllow this [link](https://spacetravelpro.netlify.app/) to preview the site
