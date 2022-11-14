@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNOLOGY</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+
+
+
+</head>
+
+<body>
+    <main class="main-4">
+        <!-- NAVIGATION BAR -->
+        <div class="navigation">
+            <img src="assets/images/shared/logo.svg" alt="logo">
+            <div class="line"></div>
+            <ul class="navlinks">
+                <li class="close"><img src="/assets/images/shared/icon-close.svg" alt="" class="close-icon"></li>
+                <li><a href="index.html">00 HOME</a></li>
+                <li><a href="destination.html">01 DESTINATION</a></li>
+                <li><a href="crew.html">02 CREW</a></li>
+                <li><a href="#">03 TECHNOLOGY</a></li>
+            </ul>
+            <img src="/assets/images/shared/icon-hamburger.svg" alt="" class="hamburger">
+        </div>
+
+
+
+
+        <div class="tech-container">
+            <h4 class="launch"><span>03</span> SPACE LAUNCH 101</h4>
+
+
+            <!-- OVERALL FLEXBOX THAT CONTAINS THE BUTTONS, THE ARTICLE AND PICTURE -->
+            <div class="tech-flex-all">
+
+                <div class="tech-button">
+                    <button aria-controls="launch-vehicle" role="tab">1</button>
+                    <button aria-controls="space-capsule" role="tab">2</button>
+                    <button aria-controls="spaceport" role="tab">3</button>
+                </div>
+
+                <!-- CHILD FLEXBOX THAT CONTAINS THE ARTICLE AND PICTURE -->
+                <div class="tech-flex" id="launch-vehicle">
+                    <article>
+                        <h6>THE TECHNOLOGY</h6>
+                        <h1>LAUNCH VEHICLE</h1>
+                        <p>A launch vehicle or carrier rocket is a rocket-propelled<br class="line-break"> vehicle used
+                            to carry a payload
+                            from
+                            Earth's surface to<br class="line-break"> space. usually to Earth orbit or beyond. Our
+                            WEB-X<br> carrier
+                            rocket
+                            is te most
+                            powerful in operation.<br class="line-break"> Standing 150 metres tall. it's quite an
+                            awe-inspiring sight<br>
+                            on
+                            the
+                            launch
+                            pad! </p>
+                    </article>
+
+                    <picture>
+                        <img src="assets/images/technology/image-launch-vehicle-portrait.jpg" alt="">
+                    </picture>
+                </div>
+
+
+                <div class="tech-flex" style="display: none;" id="space-capsule">
+                    <article>
+                        <h6>THE TECHNOLOGY</h6>
+                        <h1>SPACE CAPSULE</h1>
+                        <p>A space capsule is an often-crewed spacecraft that uses<br class="line-break"> a blunt-body
+                            reentry capsule to
+                            reenter the Earth's<br> aatmosper without wings. Capsules are distunguised<br
+                                class="line-break"> from other
+                            satelites
+                            prrimarily by the ability to survive<br class="line-break"> reentry and return a payload to
+                            the Earth's surface
+                            from<br class="line-break"> orbit.A launch vehicle or carrier rocket is a
+                            rocket-propelled<br class="line-break"> vehicle used to
+                            carry a
+                            payload
+                            from
+                            Earth's surface to space.</p>
+                    </article>
+
+                    <picture>
+                        <img src=" assets/images/technology/image-space-capsule-portrait.jpg" alt="">
+                    </picture>
+                </div>
+
+
+                <div class="tech-flex" style="display: none;" id="spaceport">
+                    <article>
+                        <h6>THE TECHNOLOGY</h6>
+                        <h1>SPACEPORT</h1>
+                        <p>A spaceport or cosmodrome is a site from launching<br class="line-break"> or recievin
+                            spacecraft, by analogy to
+                            a
+                            seaport for<br class="line-break"> ships or an airport for aircraft. The word spaceport,<br>
+                            and even more so
+                            cosmodrome, has traditionally<br class="line-break"> been used for sites capable of
+                            launching spacecraft<br class="line-break">
+                            into
+                            orbit
+                            around Earth or on interplanetary trajectories.</p>
+                    </article>
+
+                    <picture>
+                        <img src="assets/images/technology/image-spaceport-portrait.jpg" alt="">
+                    </picture>
+                </div>
+                <!-- END OF THE CHILD FLEXBOX -->
+
+
+            </div>
+            <!-- END OF THE OVERALL FLEXBOX -->
+
+        </div>
+    </main>
+
+
+
+
+    <script src="tech.js"></script>
+</body>
+
+</html>

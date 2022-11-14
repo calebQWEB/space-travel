@@ -1,0 +1,2202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  transition: 0.5s;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/images/home/background-home-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+main .navigation {
+  display: flex;
+  gap: 38rem;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  position: relative;
+}
+main .navigation .line {
+  position: absolute;
+  left: 9%;
+  height: 0.2px;
+  width: 580px;
+  background-color: gray;
+  z-index: 2;
+}
+main .navigation ul {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 1rem 1rem 0 2rem;
+  width: 100%;
+  height: 80px;
+}
+main .navigation ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+main .navigation ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: white;
+  display: block;
+  margin-top: 1.55rem;
+}
+main .navigation ul li:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+main .navigation ul li a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+main .navigation ul .close {
+  display: none;
+}
+main .main-container {
+  place-content: center;
+  margin-top: 7rem;
+  display: flex;
+  gap: 20rem;
+  align-items: center;
+}
+main .main-container h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(179, 176, 176);
+  margin-bottom: 1.5rem;
+}
+main .main-container h1 {
+  font-size: 80px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: "Cormorant SC", serif;
+}
+main .main-container p {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(179, 176, 176);
+  margin-bottom: 1.5rem;
+}
+main .main-container .circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: white;
+  align-items: center;
+}
+main .main-container .circle .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(41, 40, 40);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Cormorant SC", serif;
+}
+main .hamburger {
+  display: none;
+}
+
+@media (max-width: 1115px) {
+  main {
+    height: 150vh;
+  }
+  main .navigation {
+    gap: 25rem;
+    padding: 0 0 0 1rem;
+  }
+  main .navigation .line {
+    display: none;
+  }
+  main .navigation ul {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+  }
+  main .navigation ul li {
+    padding: 1.4rem 0.5rem;
+  }
+  main .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: block;
+    margin-top: 2.1rem;
+  }
+  main .navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+  main .navigation ul li a {
+    font-size: 12px;
+  }
+  main .main-container {
+    text-align: center;
+    gap: 11rem;
+    margin-top: 9rem;
+  }
+  main .main-container h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+  }
+  main .main-container h1 {
+    font-size: 140px;
+  }
+  main .main-container .circle {
+    height: 250px;
+    width: 250px;
+  }
+  main .main-container p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+  }
+}
+@media (max-width: 970px) {
+  main {
+    height: 100%;
+    background-image: url(/assets/images/home/background-home-tablet.jpg);
+  }
+  main .main-container {
+    text-align: center;
+    flex-direction: column;
+    gap: 11rem;
+    margin-top: 9rem;
+  }
+}
+@media (max-width: 903px) {
+  main {
+    height: 100%;
+    background-image: url(/assets/images/home/background-home-tablet.jpg);
+  }
+  main .navigation {
+    gap: 15rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 740px) {
+  main {
+    height: 200vh;
+    background-image: url(/assets/images/home/background-home-tablet.jpg);
+  }
+  main .navigation {
+    gap: 11rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 679px) {
+  main .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  main .navigation ul {
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(15px);
+    height: 60vh;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  main .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  main .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  main .navigation ul .close {
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  main .navigation ul .close .close-icon {
+    padding: 1.5rem;
+    float: right;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  main .navigation .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+@media (max-width: 500px) {
+  main .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  main .navigation ul {
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  main .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  main .main-container {
+    text-align: center;
+    flex-direction: column;
+    gap: 11rem;
+    margin-top: 9rem;
+  }
+  main .main-container h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+  }
+  main .main-container h1 {
+    font-size: 120px;
+  }
+  main .main-container .circle {
+    height: 250px;
+    width: 250px;
+  }
+  main .main-container p {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+  }
+}
+@media (max-width: 500px) {
+  main .main-container {
+    text-align: center;
+    flex-direction: column;
+    gap: 11rem;
+    margin-top: 9rem;
+  }
+  main .main-container h4 {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+  }
+  main .main-container h1 {
+    font-size: 100px;
+  }
+  main .main-container .circle {
+    height: 200px;
+    width: 200px;
+  }
+  main .main-container p {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+  }
+}
+.main-2 {
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/images/destination/background-destination-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.main-2 .navigation {
+  display: flex;
+  gap: 38rem;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  position: relative;
+}
+.main-2 .navigation .line {
+  position: absolute;
+  left: 9%;
+  height: 0.2px;
+  width: 580px;
+  background-color: gray;
+  z-index: 2;
+}
+.main-2 .navigation ul {
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(15px);
+  padding: 1rem 1rem 0 2rem;
+  width: 100%;
+  height: 80px;
+}
+.main-2 .navigation ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+.main-2 .navigation ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: white;
+  display: block;
+  margin-top: 1.55rem;
+}
+.main-2 .navigation ul li:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.main-2 .navigation ul li a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+.main-2 .navigation ul .close {
+  display: none;
+}
+.main-2 .main-container-1 {
+  place-content: center;
+  display: flex;
+  gap: 10rem;
+  margin-top: 3rem;
+  padding: 3rem;
+}
+.main-2 .main-container-1 .col .pick {
+  color: white;
+  padding-bottom: 3rem;
+  font-weight: 600;
+}
+.main-2 .main-container-1 .col .pick span {
+  color: rgb(179, 176, 176);
+  padding-right: 0.5rem;
+}
+.main-2 .main-container-1 .text-col {
+  padding-top: 4.5rem;
+}
+.main-2 .main-container-1 .text-col .tabs {
+  display: flex;
+}
+.main-2 .main-container-1 .text-col .tabs .tag-button {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-2 .main-container-1 .text-col .tabs .tag-button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-2 .main-container-1 .text-col .tabs .tag-button:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.main-2 .main-container-1 .text-col .tabs #moon {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-2 .main-container-1 .text-col .tabs #moon::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-2 .main-container-1 .text-col .tabs a {
+  text-decoration: none;
+}
+.main-2 .main-container-1 .text-col h1 {
+  font-size: 80px;
+  font-family: "Cormorant SC", serif;
+  color: white;
+  margin: 1rem 0;
+}
+.main-2 .main-container-1 .text-col p {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  margin-bottom: 3rem;
+}
+.main-2 .main-container-1 .text-col .line {
+  width: 100%;
+  height: 1px;
+  background: gray;
+  margin-bottom: 1rem;
+}
+.main-2 .main-container-1 .text-col .col-3 {
+  display: flex;
+  gap: 4rem;
+}
+.main-2 .main-container-1 .text-col .col-3 .distance h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-2 .main-container-1 .text-col .col-3 .distance h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+.main-2 .main-container-1 .text-col .col-3 .time h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-2 .main-container-1 .text-col .col-3 .time h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1115px) {
+  .main-2 {
+    height: 100%;
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+  .main-2 .navigation {
+    gap: 25rem;
+    padding: 0 0 0 1rem;
+  }
+  .main-2 .navigation .line {
+    display: none;
+  }
+  .main-2 .navigation ul {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+  }
+  .main-2 .navigation ul li {
+    padding: 1.4rem 0.5rem;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: block;
+    margin-top: 2.1rem;
+  }
+  .main-2 .navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .main-2 .navigation ul li a {
+    font-size: 12px;
+  }
+  .main-2 .main-container-1 {
+    text-align: center;
+    gap: 0rem;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .main-2 .main-container-1 .tabs {
+    justify-content: center;
+  }
+  .main-2 .main-container-1 .col .pick {
+    text-align: left;
+  }
+  .main-2 .main-container-1 .col-3 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 970px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .main-container-1 {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 903px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 15rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 740px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 11rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 679px) {
+  .main-2 {
+    background-image: url(/assets/images/destination/background-destination-mobile.jpg);
+  }
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(15px);
+    height: 60vh;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .main-2 .navigation ul .close {
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  .main-2 .navigation ul .close .close-icon {
+    padding: 1.5rem;
+    float: right;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-2 .navigation .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .main-2 .main-container-1 .col .pick {
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .main-container-1 {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-1 .col .moon-pic {
+    width: 100%;
+    height: 100%;
+  }
+  .main-2 .main-container-1 .text-col h1 {
+    font-size: 60px;
+    font-family: "Cormorant SC", serif;
+    color: white;
+    margin: 1rem 0;
+  }
+  .main-2 .main-container-1 .text-col p {
+    font-size: 13px;
+    color: rgb(179, 176, 176);
+    margin-bottom: 3rem;
+  }
+  .main-2 .main-container-1 .text-col .line {
+    width: 100%;
+    height: 1px;
+    background: gray;
+    margin-bottom: 1rem;
+  }
+  .main-2 .main-container-1 .text-col .col-3 {
+    display: flex;
+    gap: 2rem;
+  }
+  .main-2 .main-container-1 .text-col .col-3 .distance h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-1 .text-col .col-3 .distance h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .main-2 .main-container-1 .text-col .col-3 .time h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-1 .text-col .col-3 .time h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 500px) {
+  .main-2 .main-container-1 {
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-1 .text-col p .line-break {
+    display: none;
+  }
+}
+.main-3 {
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/images/crew/background-crew-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 3rem;
+}
+.main-3 .navigation {
+  display: flex;
+  gap: 38rem;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  position: relative;
+}
+.main-3 .navigation .line {
+  position: absolute;
+  left: 9%;
+  height: 0.2px;
+  width: 580px;
+  background-color: gray;
+  z-index: 2;
+}
+.main-3 .navigation ul {
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(15px);
+  padding: 1rem 1rem 0 2rem;
+  width: 100%;
+  height: 80px;
+}
+.main-3 .navigation ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+.main-3 .navigation ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: white;
+  display: block;
+  margin-top: 1.55rem;
+}
+.main-3 .navigation ul li:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.main-3 .navigation ul li a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+.main-3 .navigation ul .close {
+  display: none;
+}
+.main-3 .crew-container .meet {
+  font-size: 18px;
+  color: white;
+  margin-left: 6rem;
+}
+.main-3 .crew-container .meet span {
+  color: rgb(187, 187, 187);
+}
+.main-3 .crew-container .crew-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+.main-3 .crew-container .crew-flex article {
+  margin-top: 3rem;
+}
+.main-3 .crew-container .crew-flex article h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 2rem;
+}
+.main-3 .crew-container .crew-flex article h1 {
+  font-size: 23px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 2rem;
+}
+.main-3 .crew-container .crew-flex article p {
+  color: rgb(179, 176, 176);
+  letter-spacing: 1px;
+}
+.main-3 .crew-container .crew-flex picture img {
+  width: 100%;
+  height: 100%;
+}
+.main-3 .crew-container .crew-button {
+  text-align: center;
+  margin-top: 3rem;
+}
+.main-3 .crew-container .crew-button button {
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: none;
+}
+.main-3 .crew-container .crew-button button:focus {
+  background: black;
+  border: 1px solid white;
+}
+
+@media (max-width: 1115px) {
+  .main-3 {
+    height: 100%;
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+  .main-3 .navigation {
+    gap: 25rem;
+    padding: 0 0 0 1rem;
+  }
+  .main-3 .navigation .line {
+    display: none;
+  }
+  .main-3 .navigation ul {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+  }
+  .main-3 .navigation ul li {
+    padding: 1.4rem 0.5rem;
+  }
+  .main-3 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: block;
+    margin-top: 2.1rem;
+  }
+  .main-3 .navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .main-3 .navigation ul li a {
+    font-size: 12px;
+  }
+  .main-3 .crew-container .meet {
+    margin-top: 3rem;
+  }
+  .main-3 .crew-container .crew-flex {
+    align-items: center;
+    padding: 0 3rem;
+    margin-top: 5rem;
+  }
+  .main-3 .crew-container .crew-flex button {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 970px) {
+  .main-3 {
+    height: 100%;
+  }
+  .main-3 .crew-container {
+    text-align: center;
+  }
+  .main-3 .crew-container .meet {
+    margin-left: 0;
+    text-align: center;
+  }
+  .main-3 .crew-container .crew-flex {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .main-3 .crew-container .crew-flex .douglas {
+    padding-left: 5rem;
+  }
+}
+@media (max-width: 903px) {
+  .main-3 {
+    height: 100%;
+  }
+  .main-3 .navigation {
+    gap: 15rem;
+    padding: 0 0 0 1rem;
+  }
+  .main-3 .crew-container .douglas {
+    padding-left: 5rem;
+  }
+}
+@media (max-width: 740px) {
+  .main-3 {
+    height: 100%;
+  }
+  .main-3 .navigation {
+    gap: 11rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 679px) {
+  .main-3 {
+    background-image: url(/assets/images/crew/background-crew-mobile.jpg);
+  }
+  .main-3 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-3 .navigation ul {
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(15px);
+    height: 60vh;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-3 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-3 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .main-3 .navigation ul .close {
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  .main-3 .navigation ul .close .close-icon {
+    padding: 1.5rem;
+    float: right;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-3 .navigation .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+@media (max-width: 540px) {
+  .main-3 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-3 .navigation ul {
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-3 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-3 .crew-container {
+    text-align: center;
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  .main-3 .crew-container {
+    margin-top: 5rem;
+  }
+  .main-3 .crew-container .crew-flex p {
+    padding: 0 1rem;
+  }
+  .main-3 .crew-container .crew-flex p .line-break {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .main-3 {
+    height: 100%;
+  }
+  .main-3 .crew-container {
+    text-align: center;
+  }
+  .main-3 .crew-container .crew-flex {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .main-3 .crew-container .crew-flex .douglas {
+    width: 350px;
+    height: 350px;
+  }
+}
+.main-4 {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/images/crew/background-crew-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 3rem;
+}
+.main-4 .navigation {
+  display: flex;
+  gap: 38rem;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  position: relative;
+}
+.main-4 .navigation .line {
+  position: absolute;
+  left: 9%;
+  height: 0.2px;
+  width: 580px;
+  background-color: gray;
+  z-index: 2;
+}
+.main-4 .navigation ul {
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(15px);
+  padding: 1rem 1rem 0 2rem;
+  width: 100%;
+  height: 80px;
+}
+.main-4 .navigation ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+.main-4 .navigation ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: white;
+  display: block;
+  margin-top: 1.55rem;
+}
+.main-4 .navigation ul li:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.main-4 .navigation ul li a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+.main-4 .navigation ul .close {
+  display: none;
+}
+.main-4 .tech-container {
+  margin-top: 3rem;
+}
+.main-4 .tech-container .launch {
+  font-size: 18px;
+  color: white;
+  margin-left: 8rem;
+}
+.main-4 .tech-container .launch span {
+  color: rgb(187, 187, 187);
+}
+.main-4 .tech-container .tech-flex-all {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+.main-4 .tech-container .tech-flex-all .tech-button {
+  display: grid;
+}
+.main-4 .tech-container .tech-flex-all .tech-button button {
+  padding: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+.main-4 .tech-container .tech-flex-all .tech-button button:focus {
+  background: white;
+  color: black;
+}
+.main-4 .tech-container .tech-flex-all .tech-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+.main-4 .tech-container .tech-flex-all .tech-flex article {
+  width: 100%;
+}
+.main-4 .tech-container .tech-flex-all .tech-flex article h6 {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 1rem;
+}
+.main-4 .tech-container .tech-flex-all .tech-flex article h1 {
+  font-size: 23px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 1rem;
+}
+.main-4 .tech-container .tech-flex-all .tech-flex article p {
+  color: rgb(179, 176, 176);
+  letter-spacing: 1px;
+}
+.main-4 .tech-container .tech-flex-all .tech-flex picture img {
+  width: 450px;
+  height: 350px;
+}
+
+@media (max-width: 1115px) {
+  .main-4 {
+    height: 100%;
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+  .main-4 .navigation {
+    gap: 25rem;
+    padding: 0 0 0 1rem;
+  }
+  .main-4 .navigation .line {
+    display: none;
+  }
+  .main-4 .navigation ul {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+  }
+  .main-4 .navigation ul li {
+    padding: 1.4rem 0.5rem;
+  }
+  .main-4 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: block;
+    margin-top: 2.1rem;
+  }
+  .main-4 .navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .main-4 .navigation ul li a {
+    font-size: 12px;
+  }
+  .main-4 .tech-container .tech-flex-all {
+    gap: 2rem;
+  }
+  .main-4 .tech-container .tech-flex-all .tech-flex {
+    gap: 2rem;
+  }
+}
+@media (max-width: 970px) {
+  .main-4 {
+    height: 100%;
+  }
+  .main-4 .tech-container {
+    text-align: center;
+  }
+  .main-4 .tech-container .launch {
+    margin: 0;
+  }
+  .main-4 .tech-container .tech-flex-all {
+    flex-direction: column-reverse;
+    position: relative;
+    margin-top: 6rem;
+  }
+  .main-4 .tech-container .tech-flex-all .tech-button {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .main-4 .tech-container .tech-flex-all .tech-flex {
+    flex-direction: column;
+  }
+}
+@media (max-width: 903px) {
+  .main-4 {
+    height: 100%;
+  }
+  .main-4 .navigation {
+    gap: 15rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 740px) {
+  .main-4 {
+    height: 100%;
+  }
+  .main-4 .navigation {
+    gap: 11rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 679px) {
+  .main-4 {
+    background-image: url(/assets/images/crew/background-crew-mobile.jpg);
+  }
+  .main-4 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-4 .navigation ul {
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(15px);
+    height: 60vh;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-4 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-4 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .main-4 .navigation ul .close {
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  .main-4 .navigation ul .close .close-icon {
+    padding: 1.5rem;
+    float: right;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-4 .navigation .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+@media (max-width: 540px) {
+  .main-4 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-4 .navigation ul {
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-4 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .main-4 .tech-container {
+    padding: 2rem;
+  }
+  .main-4 .tech-container .tech-flex-all .tech-flex picture img {
+    width: 100%;
+    height: 100%;
+  }
+  .main-4 .tech-container .tech-flex-all .tech-flex .line-break {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .main-4 {
+    height: 100%;
+  }
+}
+.main-container-2 {
+  place-content: center;
+  display: flex;
+  gap: 10rem;
+  margin-top: 3rem;
+  padding: 3rem;
+}
+.main-container-2 .col .pick {
+  color: white;
+  padding-bottom: 3rem;
+  font-weight: 600;
+}
+.main-container-2 .col .pick span {
+  color: rgb(179, 176, 176);
+  padding-right: 0.5rem;
+}
+.main-container-2 .text-col {
+  padding-top: 4.5rem;
+}
+.main-container-2 .text-col .tabs {
+  display: flex;
+}
+.main-container-2 .text-col .tabs .tag-button {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-container-2 .text-col .tabs .tag-button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-container-2 .text-col .tabs .tag-button:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.main-container-2 .text-col .tabs #mars {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-container-2 .text-col .tabs #mars::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-container-2 .text-col .tabs a {
+  text-decoration: none;
+}
+.main-container-2 .text-col h1 {
+  font-size: 80px;
+  font-family: "Cormorant SC", serif;
+  color: white;
+  margin: 1rem 0;
+}
+.main-container-2 .text-col p {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  margin-bottom: 3rem;
+}
+.main-container-2 .text-col .line {
+  width: 100%;
+  height: 1px;
+  background: gray;
+  margin-bottom: 1rem;
+}
+.main-container-2 .text-col .col-3 {
+  display: flex;
+  gap: 4rem;
+}
+.main-container-2 .text-col .col-3 .distance h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-container-2 .text-col .col-3 .distance h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+.main-container-2 .text-col .col-3 .time h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-container-2 .text-col .col-3 .time h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1115px) {
+  .main-2 {
+    height: 100%;
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+  .main-2 .navigation {
+    gap: 25rem;
+    padding: 0 0 0 1rem;
+  }
+  .main-2 .navigation .line {
+    display: none;
+  }
+  .main-2 .navigation ul {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+  }
+  .main-2 .navigation ul li {
+    padding: 1.4rem 0.5rem;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: block;
+    margin-top: 2.1rem;
+  }
+  .main-2 .navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .main-2 .navigation ul li a {
+    font-size: 12px;
+  }
+  .main-2 .main-container-2 {
+    text-align: center;
+    gap: 0rem;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .main-2 .main-container-2 .tabs {
+    justify-content: center;
+  }
+  .main-2 .main-container-2 .col .pick {
+    text-align: left;
+  }
+  .main-2 .main-container-2 .col-3 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 970px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .main-container-2 {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 903px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 15rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 740px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 11rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 679px) {
+  .main-2 {
+    background-image: url(/assets/images/destination/background-destination-mobile.jpg);
+  }
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(15px);
+    height: 60vh;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .main-2 .navigation ul .close {
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  .main-2 .navigation ul .close .close-icon {
+    padding: 1.5rem;
+    float: right;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-2 .navigation .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .main-2 .main-container-2 .col .pick {
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .main-container-2 {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-2 .col .mars-pic {
+    width: 100%;
+    height: 100%;
+  }
+  .main-2 .main-container-2 .text-col h1 {
+    font-size: 60px;
+    font-family: "Cormorant SC", serif;
+    color: white;
+    margin: 1rem 0;
+  }
+  .main-2 .main-container-2 .text-col p {
+    font-size: 13px;
+    color: rgb(179, 176, 176);
+    margin-bottom: 3rem;
+  }
+  .main-2 .main-container-2 .text-col .line {
+    width: 100%;
+    height: 1px;
+    background: gray;
+    margin-bottom: 1rem;
+  }
+  .main-2 .main-container-2 .text-col .col-3 {
+    display: flex;
+    gap: 2rem;
+  }
+  .main-2 .main-container-2 .text-col .col-3 .distance h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-2 .text-col .col-3 .distance h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .main-2 .main-container-2 .text-col .col-3 .time h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-2 .text-col .col-3 .time h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 500px) {
+  .main-2 .main-container-2 {
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-2 .text-col p .line-break {
+    display: none;
+  }
+}
+.main-container-3 {
+  place-content: center;
+  display: flex;
+  gap: 10rem;
+  margin-top: 3rem;
+  padding: 3rem;
+}
+.main-container-3 .col .pick {
+  color: white;
+  padding-bottom: 3rem;
+  font-weight: 600;
+}
+.main-container-3 .col .pick span {
+  color: rgb(179, 176, 176);
+  padding-right: 0.5rem;
+}
+.main-container-3 .text-col {
+  padding-top: 4.5rem;
+}
+.main-container-3 .text-col .tabs {
+  display: flex;
+}
+.main-container-3 .text-col .tabs .tag-button {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-container-3 .text-col .tabs .tag-button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-container-3 .text-col .tabs .tag-button:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.main-container-3 .text-col .tabs #europa {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-container-3 .text-col .tabs #europa::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-container-3 .text-col .tabs a {
+  text-decoration: none;
+}
+.main-container-3 .text-col h1 {
+  font-size: 80px;
+  font-family: "Cormorant SC", serif;
+  color: white;
+  margin: 1rem 0;
+}
+.main-container-3 .text-col p {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  margin-bottom: 3rem;
+}
+.main-container-3 .text-col .line {
+  width: 100%;
+  height: 1px;
+  background: gray;
+  margin-bottom: 1rem;
+}
+.main-container-3 .text-col .col-3 {
+  display: flex;
+  gap: 4rem;
+}
+.main-container-3 .text-col .col-3 .distance h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-container-3 .text-col .col-3 .distance h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+.main-container-3 .text-col .col-3 .time h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-container-3 .text-col .col-3 .time h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1115px) {
+  .main-2 {
+    height: 100%;
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+  .main-2 .navigation {
+    gap: 25rem;
+    padding: 0 0 0 1rem;
+  }
+  .main-2 .navigation .line {
+    display: none;
+  }
+  .main-2 .navigation ul {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+  }
+  .main-2 .navigation ul li {
+    padding: 1.4rem 0.5rem;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: block;
+    margin-top: 2.1rem;
+  }
+  .main-2 .navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .main-2 .navigation ul li a {
+    font-size: 12px;
+  }
+  .main-2 .main-container-3 {
+    text-align: center;
+    gap: 0rem;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .main-2 .main-container-3 .tabs {
+    justify-content: center;
+  }
+  .main-2 .main-container-3 .col .pick {
+    text-align: left;
+  }
+  .main-2 .main-container-3 .col-3 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 970px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .main-container-2 {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 903px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 15rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 740px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 11rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 679px) {
+  .main-2 {
+    background-image: url(/assets/images/destination/background-destination-mobile.jpg);
+  }
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(15px);
+    height: 60vh;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .main-2 .navigation ul .close {
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  .main-2 .navigation ul .close .close-icon {
+    padding: 1.5rem;
+    float: right;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-2 .navigation .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .main-2 .main-container-3 .col .pick {
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .main-container-3 {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-3 .col .moon-pic {
+    width: 100%;
+    height: 100%;
+  }
+  .main-2 .main-container-3 .text-col h1 {
+    font-size: 60px;
+    font-family: "Cormorant SC", serif;
+    color: white;
+    margin: 1rem 0;
+  }
+  .main-2 .main-container-3 .text-col p {
+    font-size: 13px;
+    color: rgb(179, 176, 176);
+    margin-bottom: 3rem;
+  }
+  .main-2 .main-container-3 .text-col .line {
+    width: 100%;
+    height: 1px;
+    background: gray;
+    margin-bottom: 1rem;
+  }
+  .main-2 .main-container-3 .text-col .col-3 {
+    display: flex;
+    gap: 2rem;
+  }
+  .main-2 .main-container-3 .text-col .col-3 .distance h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-3 .text-col .col-3 .distance h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .main-2 .main-container-3 .text-col .col-3 .time h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-3 .text-col .col-3 .time h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 500px) {
+  .main-2 .main-container-3 {
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-3 .col .europa-pic {
+    width: 100%;
+    height: 100%;
+  }
+  .main-2 .main-container-3 .text-col p .line-break {
+    display: none;
+  }
+}
+.main-container-4 {
+  place-content: center;
+  display: flex;
+  gap: 10rem;
+  margin-top: 3rem;
+  padding: 3rem;
+}
+.main-container-4 .col .pick {
+  color: white;
+  padding-bottom: 3rem;
+  font-weight: 600;
+}
+.main-container-4 .col .pick span {
+  color: rgb(179, 176, 176);
+  padding-right: 0.5rem;
+}
+.main-container-4 .text-col {
+  padding-top: 4.5rem;
+}
+.main-container-4 .text-col .tabs {
+  display: flex;
+}
+.main-container-4 .text-col .tabs .tag-button {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-container-4 .text-col .tabs .tag-button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-container-4 .text-col .tabs .tag-button:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.main-container-4 .text-col .tabs #titan {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  background: none;
+  border: none;
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+}
+.main-container-4 .text-col .tabs #titan::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  display: block;
+}
+.main-container-4 .text-col .tabs a {
+  text-decoration: none;
+}
+.main-container-4 .text-col h1 {
+  font-size: 80px;
+  font-family: "Cormorant SC", serif;
+  color: white;
+  margin: 1rem 0;
+}
+.main-container-4 .text-col p {
+  font-size: 15px;
+  color: rgb(179, 176, 176);
+  margin-bottom: 3rem;
+}
+.main-container-4 .text-col .line {
+  width: 100%;
+  height: 1px;
+  background: gray;
+  margin-bottom: 1rem;
+}
+.main-container-4 .text-col .col-3 {
+  display: flex;
+  gap: 4rem;
+}
+.main-container-4 .text-col .col-3 .distance h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-container-4 .text-col .col-3 .distance h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+.main-container-4 .text-col .col-3 .time h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 176, 176);
+  margin-bottom: 0.4rem;
+}
+.main-container-4 .text-col .col-3 .time h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1115px) {
+  .main-2 {
+    height: 100%;
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+  .main-2 .navigation {
+    gap: 25rem;
+    padding: 0 0 0 1rem;
+  }
+  .main-2 .navigation .line {
+    display: none;
+  }
+  .main-2 .navigation ul {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+  }
+  .main-2 .navigation ul li {
+    padding: 1.4rem 0.5rem;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: block;
+    margin-top: 2.1rem;
+  }
+  .main-2 .navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+  .main-2 .navigation ul li a {
+    font-size: 12px;
+  }
+  .main-2 .main-container-4 {
+    text-align: center;
+    gap: 0rem;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  .main-2 .main-container-4 .tabs {
+    justify-content: center;
+  }
+  .main-2 .main-container-4 .col .pick {
+    text-align: left;
+  }
+  .main-2 .main-container-4 .col-3 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 970px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .main-container-4 {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 903px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 15rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 740px) {
+  .main-2 {
+    height: 100%;
+  }
+  .main-2 .navigation {
+    gap: 11rem;
+    padding: 0 0 0 1rem;
+  }
+}
+@media (max-width: 679px) {
+  .main-2 {
+    background-image: url(/assets/images/destination/background-destination-mobile.jpg);
+  }
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(15px);
+    height: 60vh;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .navigation ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: white;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .main-2 .navigation ul .close {
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  .main-2 .navigation ul .close .close-icon {
+    padding: 1.5rem;
+    float: right;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-2 .navigation .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .main-2 .main-container-4 .col .pick {
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .main-2 .navigation {
+    gap: 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .main-2 .navigation ul {
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+  }
+  .main-2 .navigation ul li {
+    display: block;
+    text-align: center;
+  }
+  .main-2 .main-container-4 {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-4 .col .titan-pic {
+    width: 100%;
+    height: 100%;
+  }
+  .main-2 .main-container-4 .text-col h1 {
+    font-size: 60px;
+    font-family: "Cormorant SC", serif;
+    color: white;
+    margin: 1rem 0;
+  }
+  .main-2 .main-container-4 .text-col p {
+    font-size: 13px;
+    color: rgb(179, 176, 176);
+    margin-bottom: 3rem;
+  }
+  .main-2 .main-container-4 .text-col .line {
+    width: 100%;
+    height: 1px;
+    background: gray;
+    margin-bottom: 1rem;
+  }
+  .main-2 .main-container-4 .text-col .col-3 {
+    display: flex;
+    gap: 2rem;
+  }
+  .main-2 .main-container-4 .text-col .col-3 .distance h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-4 .text-col .col-3 .distance h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .main-2 .main-container-4 .text-col .col-3 .time h6 {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(179, 176, 176);
+    margin-bottom: 0.4rem;
+  }
+  .main-2 .main-container-4 .text-col .col-3 .time h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 500px) {
+  .main-2 .main-container-4 {
+    margin-top: 5rem;
+  }
+  .main-2 .main-container-4 .text-col p .line-break {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+@use 'customs';
+
+
+// Importing the sections
+@use 'section/home';
+@use 'section/destination';
+@use 'section/crew';
+@use 'section/technology';
+
+
+// Importing the tags
+@use 'tags/mars';
+@use 'tags/europa';
+@use 'tags/titan';

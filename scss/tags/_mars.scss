@@ -1,0 +1,495 @@
+@use '../customs'as *;
+
+
+   // INTRO SECTION
+   .main-container-2 {
+    place-content: center;
+    display: flex;
+    gap: 10rem;
+    margin-top: 3rem;
+    padding: 3rem;
+    
+
+    .col {
+
+        .pick {
+            color: white;
+            padding-bottom: 3rem;
+            font-weight: 600;
+
+            span {
+                color: rgb(179, 176, 176);
+                padding-right: 0.5rem;
+            }
+        }
+
+    }
+
+    // TEXT SECTION OF OUR ROW
+    .text-col {
+        padding-top: 4.5rem;
+
+
+        // TAGS
+        .tabs {
+            display: flex;
+
+        .tag-button {
+            font-size: 15px;
+            color: rgb(179, 176, 176);
+            background: none;
+            border: none;
+            padding: 0 1rem 0 0;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                width: 0;
+                height: 2px;
+                background: white;
+                display: block;
+            }
+                
+            &:hover {
+
+                &::after {
+                    width: 100%;
+                    transition: 0.5s;
+                }
+            }
+        }
+
+
+            #mars {
+                font-size: 15px;
+                color: rgb(179, 176, 176);
+                background: none;
+                border: none;
+                padding: 0 1rem 0 0;
+                cursor: pointer;
+                    
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background: white;
+                        display: block;
+                    }
+            }
+
+            a {
+                text-decoration: none;
+            }
+    }
+        // END OF TAAGS
+
+
+        h1 {
+            font-size: 80px;
+            font-family: 'Cormorant SC', serif;
+            color: white;
+            margin: 1rem 0;
+        }
+
+        p {
+            font-size: 15px;
+            color: rgb(179, 176, 176);
+            margin-bottom: 3rem;
+
+        }
+
+        // MARGIN LINE
+        .line {
+            width: 100%;
+            height: 1px;
+            background: gray;
+            margin-bottom: 1rem;
+        }
+        // END OF MARGIN LINE
+
+
+        // DISTANCE AND TIME
+        .col-3 {
+            display: flex;
+            gap: 4rem;
+
+            .distance {
+
+                h6 {
+                    font-size: 11px;
+                    font-weight: 400;
+                    color: rgb(179, 176, 176);
+                    margin-bottom: 0.4rem;
+                }
+
+                h4 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: white;
+                    letter-spacing: 2px;
+                }
+            }
+
+
+            .time {
+
+                h6 {
+                    font-size: 11px;
+                    font-weight: 400;
+                    color: rgb(179, 176, 176);
+                    margin-bottom: 0.4rem;
+                }
+
+                h4 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: white;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        // END OF DISTANCE AND TIME
+
+        
+    }
+    // END OF THE TEXT SECTION
+}
+
+
+
+
+
+
+
+
+
+// MEDIA QUERRY
+@media(max-width:1115px) {
+    .main-2 {
+        height: 100%;
+        background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+
+        .navigation {
+            gap: 25rem;
+            padding: 0 0 0 1rem;
+
+            .line {
+                display: none;
+            }
+
+            ul {
+                height: 100px;
+                background: rgba(255,255,255,0.05);
+                backdrop-filter: blur(15px);
+
+                li {
+                    padding: 1.4rem 0.5rem;
+
+                    &::after {
+                        content: "";
+                        height: 3px;
+                        width: 0;
+                        background-color: white;
+                        display: block;
+                        margin-top: 2.1rem;
+                    }
+    
+                    &:hover {
+    
+                        &::after {
+                            width: 100%;
+                            transition: 0.5s;
+                        }
+                    }
+
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+
+        // MAIN SECTION
+        .main-container-2 {
+            text-align: center;
+            gap: 0rem;
+            margin-top: 5rem;
+            flex-direction: column;
+
+            .tabs {
+                justify-content: center;
+            }
+
+            .col {
+
+                .pick {
+                    text-align: left;
+                }
+            }
+
+            .col-3 {
+                flex-direction: column;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+@media(max-width:970px) {
+    .main-2 {
+        height: 100%;
+
+        // MAIN SECTION
+        .main-container-2 {
+            text-align: center;
+            flex-direction: column;
+        }
+    }
+}
+
+
+
+
+
+@media(max-width:903px) {
+    .main-2 {
+        height: 100%;
+
+        .navigation {
+            gap: 15rem;
+            padding: 0 0 0 1rem;
+        }
+    }
+}
+
+
+
+
+
+@media(max-width:740px) {
+    .main-2 {
+        height: 100%;
+
+        .navigation {
+            gap: 11rem;
+            padding: 0 0 0 1rem;
+        }
+    }
+}
+
+
+
+
+
+@media(max-width:679px) {
+    .main-2 {
+        background-image: url(/assets/images/destination/background-destination-mobile.jpg);
+
+        .navigation {
+            gap: 0;
+            justify-content: space-between;
+            padding: 1.5rem;
+
+            ul {
+                background: rgba(255, 255, 255, 0.089);
+                backdrop-filter: blur(15px);
+                height: 60vh;
+                padding: 0;
+                position: absolute;
+                top: -400px;
+                right: 0;
+                left: 0;
+
+                li {
+                    display: block;
+                    text-align: center;
+
+
+                    &::after {
+                        content: "";
+                        height: 3px;
+                        width: 0;
+                        background-color: white;
+                        display: none;
+                        margin-top: 0.5rem;
+                    }
+
+                }
+
+                .close {
+                    flex: none;
+                    display: block;
+                    position: relative;
+
+                    .close-icon {
+                        padding: 1.5rem;
+                        float: right;
+                        position: absolute;
+                        right: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+
+            }
+        }
+
+        .main-container-2 {
+
+            .col {
+                
+                .pick {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+@media(max-width:540px) {
+    .main-2 {
+    
+    
+        .navigation {
+            gap: 0;
+            justify-content: space-between;
+            padding: 1.5rem;
+    
+            ul {
+                padding: 0;
+                position: absolute;
+                top: -400px;
+                right: 0;
+                left: 0;
+    
+                li {
+                    display: block;
+                    text-align: center;    
+                }
+            }
+        }
+
+
+                // MAIN SECTION
+                .main-container-2 {
+                    text-align: center;
+                    margin-top: 5rem;
+
+                    .col {
+
+                        .mars-pic {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .text-col {
+
+                        h1 {
+                            font-size: 60px;
+                            font-family: 'Cormorant SC', serif;
+                            color: white;
+                            margin: 1rem 0;
+                        }
+            
+                        p {
+                            font-size: 13px;
+                            color: rgb(179, 176, 176);
+                            margin-bottom: 3rem;
+            
+                        }
+            
+                        // MARGIN LINE
+                        .line {
+                            width: 100%;
+                            height: 1px;
+                            background: gray;
+                            margin-bottom: 1rem;
+                        }
+                        // END OF MARGIN LINE
+            
+            
+                        // DISTANCE AND TIME
+                        .col-3 {
+                            display: flex;
+                            gap: 2rem;
+            
+                            .distance {
+            
+                                h6 {
+                                    font-size: 11px;
+                                    font-weight: 400;
+                                    color: rgb(179, 176, 176);
+                                    margin-bottom: 0.4rem;
+                                }
+            
+                                h4 {
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    color: white;
+                                    letter-spacing: 2px;
+                                }
+                            }
+            
+            
+                            .time {
+            
+                                h6 {
+                                    font-size: 11px;
+                                    font-weight: 400;
+                                    color: rgb(179, 176, 176);
+                                    margin-bottom: 0.4rem;
+                                }
+            
+                                h4 {
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    color: white;
+                                    letter-spacing: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+    }
+    
+}
+
+
+
+    @media(max-width:500px) {
+        .main-2 {
+          
+
+                    // MAIN SECTION
+                    .main-container-2 {
+                        margin-top: 5rem;
+
+                        .text-col {
+
+                            p {
+
+                                .line-break {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
